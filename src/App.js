@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 
+import { FormularioPage } from './componentes/formulario/FormularioPage';
+import { Subir } from './componentes/formulario/iconos/Subir';
+import {Vista} from './componentes/vista/Vista'
+
 function App() {
+  const [form,setForm] = useState ({})
+
+  const Agregar = (target) => {
+    
+    setForm({
+        ...form,
+        ...target
+      })
+    console.log('form: '+form.username)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app unnamed-character-style-1'>
+      
+        <div className='configuracion'>          
+            <FormularioPage Agregar ={Agregar}/>        
+        </div>
+        <div className='vista'>          
+            <Vista
+            title = {form.username || 'aa'} 
+            url = { form.dominio || 'll' }
+            color = {form.color}
+            />       
+        </div> 
+
     </div>
   );
 }
