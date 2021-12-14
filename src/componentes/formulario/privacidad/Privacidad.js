@@ -21,6 +21,7 @@ export const Privacidad = () => {
                 style={{
                     display:'flex',
                     justifyContent:'space-around',
+                    flexWrap: 'wrap',
                     gap: '13px'
                 }}
                 >

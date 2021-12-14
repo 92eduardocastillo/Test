@@ -1,16 +1,19 @@
-html {
-  /* width: 1920px; */
-  height: 1269px;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-body {
-  height: 1269px;
-  margin: 0;
-  
+html {
+  font-family: Fira Sans;
+  /* max-width: 100%; */
+  /* max-width: 30%; */
+  /* max-width: 100%; */
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+body {
+  font-family: Fira Sans;
+  height: fit-content;
+  /* margin: 0; */
+}
 
 

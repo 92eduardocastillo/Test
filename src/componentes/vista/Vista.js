@@ -3,10 +3,11 @@ import React from 'react'
 export const Vista = (props) => {
     const {title = 'hola', url = 'url', color = '#48b5fe'} = props
     return (
-        <svg 
+        <svg style={{maxWidth:'100%'}}
         xmlns="http://www.w3.org/2000/svg" 
         xmlnsXlink="http://www.w3.org/1999/xlink"
-         width="807" height="598" viewBox="0 0 807 598"><defs>
+         width="807" height="598"
+          viewBox="0 0 807 598"><defs>
              <style>{`.a,.b,.k{fill:#fff;}.a{stroke:#707070;}.b{stroke:#e4e4e4;}.c,.m{fill:#f5f6f8;}.d{clip - path:url(#a);}.e{fill:#feaf31;}.f{fill:#f5f5f5;}.ac,.g,.h{fill:none;}.g{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.h{stroke:#48b5fe;}.i{fill:#eaf0ff;}.i,.r{opacity:0.5;}.j{fill:#d8dfff;}.l{clip - path:url(#d);}.m{stroke:#196fc1;}.n{fill:#bcbec1;}.o{fill:#c7e4ff;}.p{fill:#e1e8eb;}.q{fill:#b4d5f5;}.aa,.r{fill:#cfd0d2;}.s{fill:
             ${color} 
             ;}.t{fill:#e7eaee;}.u{fill:#dfdfdf;}.ae,.v{fill:#538944;}.v,.w{font - size:14px;}.v{font - family:OpenSans-SemiBold, Open Sans;font-weight:600;}.w{font - family:OpenSans-Regular, Open Sans;}.x{fill:#2b2b2b;}.ad,.x{opacity:0.2;}.y{clip - path:url(#o);}.z{fill:#ebf7ff;}.ab{fill:#ffc60a;}.af{stroke:none;}.ag{filter:url(#m);}.ah{filter:url(#k);}.ai{filter:url(#i);}.aj{filter:url(#g);}.ak{filter:url(#e);}.al{filter:url(#b);}`}

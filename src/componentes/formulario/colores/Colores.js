@@ -19,6 +19,7 @@ export const Colores = () => {
                 style={{
                     display:'flex' ,
                     justifyContent:'space-between',
+                    flexWrap: 'wrap',
                     width:'100%',
                     alignItems:'center'}}
                 >

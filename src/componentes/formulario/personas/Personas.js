@@ -30,6 +30,7 @@ export const Personas = () => {
 
                         <Space
                         style={{
+                            flexWrap: 'wrap'
                             // width:'491px'
                         }}
                         >

@@ -54,18 +54,7 @@
   
 
 
-html {
-  font-family: Fira Sans;
-  width: 100vw;
-}
 
-body {
-  font-family: Fira Sans;
-}
-
-/* #root {
-  height: 100%;
-} */
 
 .h2 {
   font-size: 18px;
@@ -117,36 +106,35 @@ p {
   padding-left: 111px;
   margin-top: 42px;
   height: 100%;
-  width: 100%;
+  /* max-width: 100%; */
 }
 
-.app .ant-form-item-label {
+/* .app .ant-form-item-label {
   height: 27px;
-}
+} */
 
-.app .ant-form-item-label label{
+/* .app .ant-form-item-label label{
   height: 17px;
-}
+} */
 
 .vista {
   margin-top: 149px;
+  flex-basis: 807px;
 }
 
 .configuracion {
+  /* background-color: #000000; */
+  flex-basis: 813px;
   display: flex;
   flex-direction: column;
-  /* width: 613px; */
-  max-width: 613px;
-  /* flex-shrink: 1; */
-  /* width: 80%; */
-  flex-grow: 1;
-  /* max-width: 80%; */
+  
+  width: 80%;
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -154,7 +142,7 @@ p {
   display: flex;
   flex-direction: column;
   /* width: 611px; */
-  height: 181px;  
+  /* height: 181px;   */
   margin-bottom: 30px;
 }
 
@@ -179,7 +167,7 @@ p {
 
     .logo-row-2 {
       display: flex;
-      height: 67px;
+      /* height: 67px; */
     } 
 
         /* .logo-parrafo {
@@ -196,7 +184,7 @@ p {
 
 .url-space-container {
   /* width: 611px; */
-  height: 237px;
+  /* height: 237px; */
   margin-bottom: 30px;
 }
 
@@ -224,7 +212,6 @@ p {
 
 .personas-container {
   /* width: 611px; */
-  height: 153px;
   margin-bottom: 30px;
 }
 
@@ -238,10 +225,6 @@ p {
 .personas-item{
   font-family: Fira Sans;
 }
-
-
-
-
 
 
 .radio .ant-radio-wrapper {
@@ -274,18 +257,18 @@ p {
 
 
 .colores-container {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 75px;
   /* width: 611px; */
   margin-bottom: 30px;
 }
 
 .privacidad-container {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   /* width: 611px; */
-  height: 124px;
   margin-bottom: 40px;
 }
 
@@ -307,10 +290,17 @@ p {
 
   .app {
     padding-left: 0px;
+    align-items: center;
     justify-content: center;
   }
 
   .configuracion {
     max-width: 80%;
   }
+
+  
+    
+  
+
+  
 }
