@@ -120,15 +120,15 @@ p {
 .vista {
   margin-top: 149px;
   flex-basis: 807px;
+  max-width: 807px;
 }
 
 .configuracion {
   /* background-color: #000000; */
-  flex-basis: 813px;
+  flex-basis: 613px;
+  max-width: 613px;
   display: flex;
   flex-direction: column;
-  
-  width: 80%;
 }
 
 .formulario {
