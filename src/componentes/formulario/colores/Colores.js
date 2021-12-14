@@ -12,6 +12,7 @@ export const Colores = () => {
             name= 'color'
             label= 'Color del tema'
             style={{display:'flex' ,justifyContent:'space-between',width:'100%'}}
+            initialValue={'#48B5FE'}
             >
                 <Radio.Group 
                 defaultValue='#48B5FE' 

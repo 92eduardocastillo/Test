@@ -4,17 +4,10 @@ import { Form, Button, Upload, Avatar  } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Subir } from '../iconos/Subir';
 
+import { style1 } from '../styles/styles';
 
 
-
-export const Logo = () => {
-      const style = {}      
-        style.avatar = {       
-        background: '#343C4A 0% 0% no-repeat padding-box',
-        borderRadius: '34px',
-        opacity: '1', 
-        marginRigth: '10px'     
-      }      
+export const Logo = () => {    
      
     const normFile = (e) => {
         console.log('Upload event:', e);      
@@ -33,14 +26,21 @@ export const Logo = () => {
 
           <div className='logo-row-1'>
 
-              <div className='logo-avatar'>
+              
                   <Avatar
                   size={67}
-                  style={style.avatar}   
+                  style={{       
+                    backgroundColor: '#343C4A',
+                    borderRadius: '34px',
+                    opacity: '1', 
+                    marginRight: '13px',
+                    fontSize: '37px',
+                    fontWeight: 'bold' 
+                  }}   
                 >
                   B
                 </Avatar>
-              </div>
+             
 
               <div className='logo-subir'>
                   <Form.Item
@@ -51,14 +51,13 @@ export const Logo = () => {
                 >
                   <Upload name="logo" action="/upload.do" listType="picture" style={{width:'105px'}}>
                     <Button 
-                    icon={
-                    <Subir />
-                    } style={{
+                    icon={ <Subir /> } 
+                    style={{
                       borderRadius:'5px',
                       width:'105px',
+                      color: '#00000080',
                       paddingLeft:'12px',
-                      paddingRight: '7px',
-                      color: '#00000080'
+                      paddingRight: '7px',                      
                       }}>Subir logo</Button>
                   </Upload>            
 
@@ -75,13 +74,12 @@ export const Logo = () => {
              }}
               />
             <div className='logo-parrafo'>
-              <p className='unnamed-character-style-2'> 
+              <p style={style1}> 
                     Este logo identificará tu espacio entre el resto.
               </p>
                 
-              <p className='unnamed-character-style-2'>
-                    Preferiblemente sube una imagen .png igual o superior a 65px a 72ppp con fondo
-                    <br/>
+              <p style={style1}>
+                    Preferiblemente sube una imagen .png igual o superior a 65px a 72ppp con fondo<br/>                    
                     transparente.
               </p>
             </div>

@@ -58,7 +58,7 @@ export const FormularioPage = ({Agregar}) => {
 
           <Privacidad />      
 
-          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+          <Form.Item wrapperCol={{ offset: 0, span: 24 }}>
             <Button type="primary" htmlType="submit">
             Guardar cambios
             </Button>

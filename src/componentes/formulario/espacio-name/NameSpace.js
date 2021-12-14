@@ -7,6 +7,7 @@ export const NameSpace = () => {
             <Form.Item
             label="Nombre del espacio"
             name="username"
+            initialValue={''}
             // rules={[{ required: true, message: 'Please input your username!' }]}
             >
                 <Input placeholder="Ep: Mi espacio de trabajo" name='aaaaaaaaaaaaaa'/>  

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Form ,Radio  } from 'antd';
+import { Form ,Radio, Space  } from 'antd';
 
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 
 export const Personas = () => {
 
-    const cantidadPersonas = ['Sólo yo','2 - 10','11 - 25', '11 - 25', '26 - 50', '51 - 100' , '500 +']
+    const cantidadPersonas = ['Sólo yo','2 - 10','11 - 25', '26 - 50', '51 - 100' , '500 +']
 
     return (
         <div className='personas-container'>
@@ -13,29 +13,36 @@ export const Personas = () => {
             <Form.Item 
                 label="¿Cuántas personas trabajarán contigo, incluyéndote a ti?" 
                 name="personas"
+                initialValue={3}
                 
             >
                     
                     <Radio.Group
-                    size='large'
-                    defaultValue="3" 
+                    // size='large'
+                    // defaultValue="3" 
                     style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        width: '100%',
-                        alignItems: 'center'}}
+                        // display: 'flex',
+                        // justifyContent: 'space-between',
+                        // width: '100%',
+                        // alignItems: 'center'
+                    }}
                         >
 
-                        <div className='persona-group'>
+                        <Space
+                        style={{
+                            // width:'491px'
+                        }}
+                        >
+
                         {
                         cantidadPersonas.map( ( texto , index ) => (
                             <div key={index}>
                                 <Radio.Button
-                                style={{borderRadius: '5px', 
+                                style={{
+                                borderRadius: '5px',
+                                width:'', 
                                 height: '46px',
-                                padding: '0px 9px',
                                 display: 'flex',
-                                justifyContent: 'center',
                                 alignItems: 'center',
                                 fontSize: '14px',
                                 fontWeight: 'normal',
@@ -48,8 +55,9 @@ export const Personas = () => {
                             </div>
                             ))
                         }
+                        </Space>
 
-                </div>
+               
                        
                     </Radio.Group>
 
@@ -70,7 +78,7 @@ export const Personas = () => {
               </p>
               </div>
 
-        </div>
+            </div>
      
         </div>
     )

@@ -56,39 +56,37 @@
 
 html {
   font-family: Fira Sans;
+  width: 100vw;
 }
 
 body {
   font-family: Fira Sans;
 }
 
-#root {
+/* #root {
   height: 100%;
-  width: 100%;
-}
+} */
 
 .h2 {
   font-size: 18px;
 }
 
-label {
+label , input {
   font-family: var(--unnamed-font-family-fira-sans);
   font-style: var(--unnamed-font-style-normal);
   font-size: var(--unnamed-font-size-14);
   line-height: var(--unnamed-line-spacing-20);
   letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+label {
   color: var(--unnamed-color-000000);
   font-weight: bold;
 }
 
 input {
-  font-family: var(--unnamed-font-family-fira-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-14);
-  line-height: var(--unnamed-line-spacing-20);
-  letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-000080);
+  
 }
 
 p {
@@ -116,9 +114,10 @@ p {
 .app {
   display: flex;
   justify-content: space-between;
-  margin-left: 111px;
+  padding-left: 111px;
   margin-top: 42px;
   height: 100%;
+  width: 100%;
 }
 
 .app .ant-form-item-label {
@@ -136,19 +135,25 @@ p {
 .configuracion {
   display: flex;
   flex-direction: column;
-  width: 613px;
+  /* width: 613px; */
+  max-width: 613px;
+  /* flex-shrink: 1; */
+  /* width: 80%; */
+  flex-grow: 1;
+  /* max-width: 80%; */
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 
 .logo-container {
   display: flex;
   flex-direction: column;
-  width: 611px;
+  /* width: 611px; */
   height: 181px;  
   margin-bottom: 30px;
 }
@@ -174,28 +179,28 @@ p {
 
     .logo-row-2 {
       display: flex;
-      justify-content: space-between;
       height: 67px;
     } 
 
-        .logo-parrafo {
+        /* .logo-parrafo {
           width: 585px;
-        }  
+        }   */
 
   
 
 .name-space-container {
-  width: 611px;
+  /* width: 611px; */
   height: 72px;
   margin-bottom: 30px;
 }  
 
 .url-space-container {
-  width: 611px;
+  /* width: 611px; */
   height: 237px;
   margin-bottom: 30px;
 }
-  
+
+
   .ant-input {
     height: 45px;
   }
@@ -218,13 +223,13 @@ p {
 
 
 .personas-container {
-  width: 611px;
+  /* width: 611px; */
   height: 153px;
   margin-bottom: 30px;
 }
 
 .persona-group {
-  width: 491px;
+  /* width: 491px; */
   height: 46px;;
   display: flex;
   justify-content: space-between;
@@ -272,32 +277,40 @@ p {
   display: flex;
   justify-content: space-between;
   height: 75px;
-  width: 611px;
+  /* width: 611px; */
   margin-bottom: 30px;
 }
 
 .privacidad-container {
   display: flex;
   justify-content: space-between;
-  width: 611px;
+  /* width: 611px; */
+  height: 124px;
+  margin-bottom: 40px;
 }
 
-.privaciad-item {
+/* .privaciad-item {
   width: 299px;
-  
-}
+} */
 
 .privacidad-boton {
   padding-top: 40px;
   padding-left: 38px;
-  width: 100%;
+  /* width: 100%; */
 }
-
-
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .vista {
-    visibility: hidden;
+    display: none;
+  }
+
+  .app {
+    padding-left: 0px;
+    justify-content: center;
+  }
+
+  .configuracion {
+    max-width: 80%;
   }
 }

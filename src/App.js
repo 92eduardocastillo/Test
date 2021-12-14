@@ -2,7 +2,6 @@ import {useState} from 'react';
 import './App.css';
 
 import { FormularioPage } from './componentes/formulario/FormularioPage';
-import { Subir } from './componentes/formulario/iconos/Subir';
 import {Vista} from './componentes/vista/Vista'
 
 function App() {
