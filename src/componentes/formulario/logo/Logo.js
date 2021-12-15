@@ -5,7 +5,6 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Subir } from '../iconos/Subir';
 
 import { style1 } from '../styles/styles';
-import { LogoUpload } from './LogoUpload';
 
 
 export const Logo = () => {    
@@ -68,8 +67,7 @@ export const Logo = () => {
 
                 </Form.Item>
               </div>   
-
-              <LogoUpload />         
+         
             
           </div> 
 
