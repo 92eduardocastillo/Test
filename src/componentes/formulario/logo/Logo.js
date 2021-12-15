@@ -4,26 +4,16 @@ import { Form, Button, Upload, Avatar  } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Subir } from '../iconos/Subir';
 
-import { style1 } from '../styles/styles';
-
 
 export const Logo = () => {    
      
-    const normFile = (e) => {
-        console.log('Upload event:', e);      
-        // if (Array.isArray(e)) {
-        //   return e;
-        // }      
-        // return e && e.fileList;
-      };
+    
 
     return (
       <div className='logo-container'> 
-
           <div style={{height:'31px'}}>
             <b>Logo del espacio</b>
-          </div> 
-
+          </div>
           <div className='logo-row-1'>
 
               
@@ -47,9 +37,7 @@ export const Logo = () => {
               <div className='logo-subir'>
                   <Form.Item
                   name="upload"
-                  label=""
-                  valuePropName="fileList"
-                  getValueFromEvent={normFile}
+                  // getValueProps={(e)=>console.log(e)}
                 >
                   <Upload name="logo" action="/upload.do" listType="picture" style={{width:'105px'}}>
                     <Button 

@@ -45,10 +45,12 @@
   }
 
   .style-3 {
-    font-style: var(--unnamed-font-style-normal);
-    font-size: var(--unnamed-font-size-18);
-    line-height: var(--unnamed-line-spacing-20);
-    letter-spacing: var(--unnamed-character-spacing-0);
+    font-family: var(--unnamed-font-family-fira-sans);
+  font-style: var(--unnamed-font-style-normal);
+  font-size: var(--unnamed-font-size-14);
+  line-height: var(--unnamed-line-spacing-20);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  font-weight: lighter;
     color: var(--unnamed-color-000000D6);
   }
   
@@ -267,6 +269,10 @@ p {
   height: 27px;
 }  */
 
+.ant-upload-list-picture-card-container {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .vista {
@@ -283,7 +289,9 @@ p {
     max-width: 80%;
   }
 
-  
+  .ant-form-item-label > label {
+    height: auto;
+  }
     
   
 

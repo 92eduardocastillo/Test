@@ -13,13 +13,11 @@ export const Personas = () => {
             <Form.Item 
                 label="¿Cuántas personas trabajarán contigo, incluyéndote a ti?" 
                 name="personas"
-                initialValue={3}
-                
+                initialValue={3}                
             >
                     
                     <Radio.Group
                     // size='large'
-                    // defaultValue="3" 
                     style={{
                         // display: 'flex',
                         // justifyContent: 'space-between',

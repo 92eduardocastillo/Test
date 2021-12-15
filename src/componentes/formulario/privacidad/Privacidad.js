@@ -10,11 +10,10 @@ export const Privacidad = () => {
             <Form.Item wrapperCol={{ offset: 0, span: 24 }}
             label='Privacidad del espacio'
             name='privacidad'
-            initialValue={"privado"}
+            initialValue="privado"
             >
 
                 <Radio.Group
-                defaultValue="1"
                 size={'large'}
                 style={{
                     display:'flex',

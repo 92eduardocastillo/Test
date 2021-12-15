@@ -15,13 +15,13 @@ export const Colores = () => {
             initialValue={'#48B5FE'}
             >
                 <Radio.Group 
-                defaultValue='#48B5FE' 
                 style={{
                     display:'flex' ,
                     justifyContent:'space-between',
                     flexWrap: 'wrap',
                     width:'100%',
-                    alignItems:'center'}}
+                    alignItems:'center'
+                }}
                 >
                 
                 {
