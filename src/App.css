@@ -71,6 +71,7 @@ label , input {
 label {
   color: var(--unnamed-color-000000);
   font-weight: bold;
+
 }
 
 input {
@@ -79,8 +80,11 @@ input {
 }
 
 p {
+  tab-size: 7px;
   color: #00000080;
   margin-left: 8px;
+  margin-bottom: 0px;
+  padding-bottom: 7px;
   font-family: var(--unnamed-font-family-fira-sans);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
@@ -109,13 +113,17 @@ p {
   /* max-width: 100%; */
 }
 
-/* .app .ant-form-item-label {
+/* .ant-form-item-label {
+  height: 17px;
+} */
+
+/* .ant-form-item-label  {
   height: 27px;
 } */
 
-/* .app .ant-form-item-label label{
-  height: 17px;
-} */
+ /* .ant-form-item-label > label {
+  height: 27px;
+}  */
 
 .vista {
   margin-top: 149px;
@@ -143,7 +151,7 @@ p {
   flex-direction: column;
   /* width: 611px; */
   /* height: 181px;   */
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
     .logo-row-1 {
@@ -197,7 +205,7 @@ p {
     margin-bottom: 16px;
   }
 
-  .ant-input::placeholder{
+  .ant-input::placeholder , .ant-input-suffix , .ant-input-affix-wrapper {
   font-family: var(--unnamed-font-family-fira-sans);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
@@ -205,7 +213,6 @@ p {
   line-height: var(--unnamed-line-spacing-20);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-000080);
-  height: 17px;
   }
 
 
