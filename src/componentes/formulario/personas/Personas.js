@@ -40,10 +40,11 @@ export const Personas = () => {
                             <div key={index}>
                                 <Radio.Button
                                 style={{
+                                // color: '#149FFC',
                                 borderRadius: '5px',
-                                width:'', 
                                 height: '46px',
                                 display: 'flex',
+                                // borderColor: '#48B5FE',
                                 alignItems: 'center',
                                 fontSize: '14px',
                                 fontWeight: 'normal',

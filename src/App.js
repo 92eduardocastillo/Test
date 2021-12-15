@@ -24,9 +24,9 @@ function App() {
         </div>
         <div className='vista'>          
             <Vista
-            title = {form.username || 'aa'} 
-            url = { form.dominio || 'll' }
-            color = {form.color}
+            title = {form.username || 'Plankton - Mi Espacio'} 
+            url = { form.dominio || 'mi_dominio.plankton.com/proyectos/plan_de_ventas' }
+            color = {form.color || '#48b5fe' }
             />       
         </div> 
 

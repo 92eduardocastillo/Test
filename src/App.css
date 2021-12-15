@@ -5,7 +5,7 @@
   --unnamed-color-ffffff: #FFFFFF;
   --unnamed-color-e4e4e4: #E4E4E4;
   --unnamed-color-000000: #000000;
-  --unnamed-color-000080: #00000080;
+  --unnamed-color-00000080: #00000080;
   --unnamed-color-ebf7ff: #EBF7FF;
   --unnamed-color-ff55f5: #F5F5F5;
   --unnamed-color-fec148: #FEC148;
@@ -41,7 +41,7 @@
   font-size: var(--unnamed-font-size-14);
   line-height: var(--unnamed-line-spacing-20);
   letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000080);
+  color: var(--unnamed-color-00000080);
   }
 
   .style-3 {
@@ -56,7 +56,7 @@
   font-size: 18px;
 }
 
-label , input {
+label , input, p {
   font-family: var(--unnamed-font-family-fira-sans);
   font-style: var(--unnamed-font-style-normal);
   font-size: var(--unnamed-font-size-14);
@@ -67,37 +67,27 @@ label , input {
 label {
   color: var(--unnamed-color-000000);
   font-weight: bold;
-
-}
-
-input {
-  color: var(--unnamed-color-000080);
   
+}
+.ant-form-item-label > label {
+  height: 17px;
+  line-height: var(--unnamed-line-spacing-20);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+input , p {
+  color: var(--unnamed-color-00000080); 
+  font-weight: var(--unnamed-font-weight-normal);
 }
 
 p {
-  tab-size: 7px;
-  color: #00000080;
   margin-left: 8px;
   margin-bottom: 0px;
   padding-bottom: 7px;
-  font-family: var(--unnamed-font-family-fira-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-14);
-  line-height: var(--unnamed-line-spacing-20);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000080);
-  /* height: 67px; */
-} 
-
-.column {
-  display: flex;
-  flex-direction: column;
+  padding-right: 5px;
 }
 
-.row {
-  display: flex;
+.sin-padding-bottom {
+  padding-bottom: 0px;
 }
 
 .app {
@@ -106,20 +96,7 @@ p {
   padding-left: 111px;
   margin-top: 42px;
   height: 100%;
-  /* max-width: 100%; */
 }
-
-/* .ant-form-item-label {
-  height: 17px;
-} */
-
-/* .ant-form-item-label  {
-  height: 27px;
-} */
-
- /* .ant-form-item-label > label {
-  height: 27px;
-}  */
 
 .vista {
   margin-top: 149px;
@@ -180,17 +157,13 @@ p {
   
 
 .name-space-container {
-  /* width: 611px; */
-  height: 72px;
+  /* height: 72px; */
   margin-bottom: 30px;
 }  
 
 .url-space-container {
-  /* width: 611px; */
-  /* height: 237px; */
   margin-bottom: 30px;
 }
-
 
   .ant-input {
     height: 45px;
@@ -207,10 +180,8 @@ p {
   font-size: var(--unnamed-font-size-14);
   line-height: var(--unnamed-line-spacing-20);
   letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000080);
+  color: var(--unnamed-color-00000080);
   }
-
-
 
 .personas-container {
   /* width: 611px; */
@@ -227,7 +198,6 @@ p {
 .personas-item{
   font-family: Fira Sans;
 }
-
 
 .radio .ant-radio-wrapper {
   margin-right: 0px;
@@ -262,7 +232,6 @@ p {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  /* width: 611px; */
   margin-bottom: 30px;
 }
 
@@ -274,11 +243,29 @@ p {
   margin-bottom: 40px;
 }
 
-.privacidad-boton {
+.privacidad-boton{
   padding-top: 40px;
   padding-left: 38px;
   max-width: 299px;
 }
+
+.ant-btn-primary {
+  background: #48B5FE;
+  border-color: #48B5FE;
+}
+
+
+/* .ant-form-item-label {
+  height: 17px;
+} */
+
+/* .ant-form-item-label  {
+  height: 27px;
+} */
+
+ /* .ant-form-item-label > label {
+  height: 27px;
+}  */
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

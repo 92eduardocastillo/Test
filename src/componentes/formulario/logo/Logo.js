@@ -79,11 +79,11 @@ export const Logo = () => {
              }}
               />
             <div className='logo-parrafo'>
-              <p style={style1}> 
+              <p> 
                     Este logo identificará tu espacio entre el resto.
               </p>
                 
-              <p style={style1}>
+              <p className='sin-padding-bottom'> 
                     Preferiblemente sube una imagen .png igual o superior a 65px a 72ppp con fondo<br/>                    
                     transparente.
               </p>

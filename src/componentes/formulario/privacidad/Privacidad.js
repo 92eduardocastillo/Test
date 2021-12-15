@@ -33,7 +33,8 @@ export const Privacidad = () => {
                             value="privado"
                             style={{
                                 borderRadius: '5px',
-                                height: '100%'
+                                height: '100%',
+                                paddingLeft: '25px'
                             }}
                             className='privacidad-boton'
                             >
@@ -53,7 +54,8 @@ export const Privacidad = () => {
                         value="publico"
                         style={{
                             borderRadius: '5px',
-                            height: '100%'
+                            height: '100%',
+                            paddingLeft: '25px'
                         }}
                         className='privacidad-boton'
                         >

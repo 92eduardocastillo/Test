@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Vista = (props) => {
-    const {title = 'hola', url = 'url', color = '#48b5fe'} = props
+export const Vista = ( {title, url , color } ) => {
+    
     return (
         <svg style={{maxWidth:'100%'}}
         xmlns="http://www.w3.org/2000/svg" 
