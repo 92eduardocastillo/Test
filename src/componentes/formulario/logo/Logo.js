@@ -5,6 +5,7 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Subir } from '../iconos/Subir';
 
 import { style1 } from '../styles/styles';
+import { LogoUpload } from './LogoUpload';
 
 
 export const Logo = () => {    
@@ -40,6 +41,8 @@ export const Logo = () => {
                 >
                   B
                 </Avatar>
+
+                
              
 
               <div className='logo-subir'>
@@ -59,10 +62,14 @@ export const Logo = () => {
                       paddingLeft:'12px',
                       paddingRight: '7px',                      
                       }}>Subir logo</Button>
-                  </Upload>            
+                  </Upload> 
+
+                            
 
                 </Form.Item>
-              </div>           
+              </div>   
+
+              <LogoUpload />         
             
           </div> 
 

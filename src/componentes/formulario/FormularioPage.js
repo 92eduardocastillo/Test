@@ -58,14 +58,28 @@ export const FormularioPage = ({Agregar}) => {
 
           <Privacidad />      
 
-          <Form.Item wrapperCol={{ offset: 0, span: 24 }}>
-            <Button type="primary" htmlType="submit">
-            Guardar cambios
+          
+            <div style={{
+              display: 'flex',
+              gap: '15px',
+              flexWrap: 'wrap',
+              marginBottom: '108px'
+              }}>
+            <Button 
+            type="primary" 
+            htmlType="submit"
+            size='large'
+            style={{borderRadius:'5px'}}
+            >Guardar cambios
             </Button>
-            <Button htmlType="reset">
-            Descartar
+            <Button 
+            htmlType="reset"
+            size='large'
+            style={{borderRadius:'5px'}}
+            >Descartar
             </Button>
-          </Form.Item>
+            </div>
+           
 
         </Form>
       </div>

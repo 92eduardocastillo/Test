@@ -3,8 +3,6 @@ import { Form ,Radio  } from 'antd';
 
 export const Privacidad = () => {
 
-    const botonStyle = { height: '97px', borderRadius: '5px'}
-
     return (
         
         <div className='privacidad-container'>
@@ -21,17 +19,22 @@ export const Privacidad = () => {
                 style={{
                     display:'flex',
                     justifyContent:'space-around',
-                    flexWrap: 'wrap',
-                    gap: '13px'
+                    // flexWrap: 'wrap',
+                    gap: '13px',
+                    width:'100%',
+                    minHeight: '97px'
                 }}
                 >
                 
                 
-                    <div style={{position: 'relative',width:'299px'}}>
+                    <div style={{position: 'relative'}}>
                             
                             <Radio.Button 
                             value="privado"
-                            style={botonStyle}
+                            style={{
+                                borderRadius: '5px',
+                                height: '100%'
+                            }}
                             className='privacidad-boton'
                             >
                             <p style={{lineHeight: '20px'}}>El contenido será visible sólo para tí y los miembros de tu Organización.</p>                        
@@ -44,11 +47,14 @@ export const Privacidad = () => {
 
                     </div>
 
-                    <div style={{position: 'relative',width:'299px'}}>
+                    <div style={{position: 'relative'}}>
                         
                         <Radio.Button 
                         value="publico"
-                        style={botonStyle}
+                        style={{
+                            borderRadius: '5px',
+                            height: '100%'
+                        }}
                         className='privacidad-boton'
                         >
                         <p style={{lineHeight: '20px', fontSize:'14px', fontFamily:'Fira Sans'}}>Cualquiera con el vínculo podrá ver la actividad de tu Organización</p>                        
