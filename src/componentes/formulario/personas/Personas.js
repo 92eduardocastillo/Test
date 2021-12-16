@@ -45,7 +45,7 @@ export const Personas = () => {
                                 // borderColor: '#48B5FE',
                                 alignItems: 'center',
                                 fontSize: '14px',
-                                fontWeight: 'normal',
+                                fontWeight: 'Regular 400',
                                 fontFamily: 'Fira Sans'                                                             
                             }}
                                 className='personas-item' 

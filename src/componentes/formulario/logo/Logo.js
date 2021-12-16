@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Form, Button, Upload, Avatar  } from 'antd';
 
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -7,6 +7,36 @@ import { Subir } from '../iconos/Subir';
 
 export const Logo = () => {    
      
+
+  const [fileList, setFileList] = useState();
+
+  const [file, setFile] = useState();
+
+  const onChange = ({ fileList: newFileList }) => {
+    // if(newFileList.length===2){
+    //   newFileList.shift()
+    //   console.log(newFileList)
+    // }    
+      console.log(newFileList);        
+        setFileList(newFileList);
+        setFile(newFileList)
+  };
+
+  const onPreview = async file => {
+    let src = file.url;
+    if (!src) {
+      src = await new Promise(resolve => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file.originFileObj);
+        reader.onload = () => resolve(reader.result);
+      });
+    }
+    const image = new Image();
+    console.log(image);
+    image.src = src;
+    const imgWindow = window.open(src);
+    imgWindow.document.write(image.outerHTML);
+  };
     
 
     return (
@@ -22,13 +52,16 @@ export const Logo = () => {
                   style={{       
                     backgroundColor: '#343C4A',
                     borderRadius: '34px',
-                    opacity: '1', 
                     marginRight: '13px',
                     fontSize: '37px',
+                    lineHeight: '34px',
                     fontWeight: 'bold' 
                   }}   
                 >
-                  B
+               {/* { (!fileList)
+               ? (<>B</>)
+               : (<p>{fileList[0].thumbUrl}<p/>)            
+              } */}
                 </Avatar>
 
                 
@@ -39,8 +72,16 @@ export const Logo = () => {
                   name="upload"
                   // getValueProps={(e)=>console.log(e)}
                 >
-                  <Upload name="logo" action="/upload.do" listType="picture" style={{width:'105px'}}>
-                    <Button 
+                  <Upload 
+                  name="logo" 
+                  action="" 
+                  listType="picture" 
+                  // listType="picture-card"
+                  fileList={fileList}
+                  onChange={onChange}
+                  onPreview={onPreview}
+                  style={{width:'105px'}}>
+                    <Button                   
                     icon={ <Subir /> } 
                     style={{
                       borderRadius:'5px',

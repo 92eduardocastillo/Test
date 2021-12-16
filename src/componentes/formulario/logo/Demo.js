@@ -5,11 +5,11 @@ export const Demo = () => {
   const [fileList, setFileList] = useState([]);
 
   const onChange = ({ fileList: newFileList }) => {
-    // if(newFileList.length===2){
-    //   newFileList.shift()
-    // }
+    if(newFileList.length===2){
+      newFileList.shift()
+    }
     
-    //   console.log(newFileList);
+      console.log(newFileList);
         
         setFileList(newFileList);
       
@@ -36,8 +36,7 @@ export const Demo = () => {
         listType="picture-card"
         fileList={fileList}
         onChange={onChange}
-        onPreview={onPreview}
-        
+        onPreview={onPreview}        
       >
         {fileList.length < 5 && '+ Upload'}
       </Upload>
