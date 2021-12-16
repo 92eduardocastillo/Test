@@ -13,7 +13,8 @@ export const UrlSpace = () => {
           // rules={[{ required: true, message: 'Please input your username!' }]}
         >
           <Input placeholder="Ep: mi.dominio"
-          //  suffix="dofleini.com"
+           suffix="dofleini.com"
+          height='45px'
            />
         </Form.Item>
 

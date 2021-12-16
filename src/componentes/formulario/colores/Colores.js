@@ -11,16 +11,20 @@ export const Colores = () => {
             <Form.Item 
             name= 'color'
             label= 'Color del tema'
-            style={{display:'flex' ,justifyContent:'space-between',width:'100%'}}
+            style={{display:'flex' ,
+            justifyContent:'space-between',
+            width:'100%',
+            marginBottom: '0px'
+        }}
             initialValue={'#48B5FE'}
             >
                 <Radio.Group 
                 style={{
                     display:'flex' ,
                     justifyContent:'space-between',
+                    alignItems:'center',
                     flexWrap: 'wrap',
-                    width:'100%',
-                    alignItems:'center'
+                    width:'100%'          
                 }}
                 >
                 

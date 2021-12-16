@@ -50,13 +50,18 @@
   font-size: var(--unnamed-font-size-18);
   line-height: var(--unnamed-line-spacing-20);
   letter-spacing: var(--unnamed-character-spacing-0);
-  font-weight: bold;
     color: var(--unnamed-color-000000D6);
   }
   
-.h2 {
-  font-size: 18px;
-}
+  .h1 {
+    font-family: Fira Sans;
+    font-size: 18px;    
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
 
 label , input, p {
   font-family: var(--unnamed-font-family-fira-sans);
@@ -68,13 +73,30 @@ label , input, p {
 
 label {
   color: var(--unnamed-color-000000);
-  font-weight: 400;
-  
+  font-weight: 400;  
 }
+
 .ant-form-item-label > label {
   height: 17px;
   line-height: var(--unnamed-line-spacing-20);
   letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  color: #149FFC;
+}
+
+.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+  border-right-color: #48B5FE;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+  border-color: #48B5FE;
+}
+
+.ant-input-affix-wrapper {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 15px;
 }
 
 input , p {
@@ -108,7 +130,6 @@ p {
 }
 
 .configuracion {
-  /* background-color: #000000; */
   flex-basis: 613px;
   max-width: 613px;
   display: flex;
@@ -234,6 +255,7 @@ p {
 .colores-container {
   max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 30px;
 }
@@ -262,25 +284,17 @@ p {
   height: 17px;
 } */
 
-/* .ant-form-item-label  {
-  height: 27px;
-} */
+.ant-form-item-label  {
+  max-height: 27px;
+}
 
- /* .ant-form-item-label > label {
-  height: 27px;
-}  */
+ 
 
 .ant-upload-list-item {
   display: none;
 }
 
-/* .ant-upload-list-picture-card-container {
-  display: none;
-}
 
-.ant-upload-list .ant-upload-list-picture {
-  display: none;
-} */
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -298,11 +312,9 @@ p {
     max-width: 80%;
   }
 
-  .ant-form-item-label > label {
-    height: auto;
-  }
-    
-  
+  .ant-form-item-label {
+    max-height: 60px;
+}
 
   
 }

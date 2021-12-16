@@ -15,15 +15,16 @@ import { Privacidad } from './privacidad/Privacidad';
   
 
 export const FormularioPage = ({Agregar}) => {
-
   
 
-    const onFinish = (values) => {
+      const onFinish = (values) => {
         console.log('Success:', values);
+        alert('Datos Guardados')
       };
     
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
+        alert('Error al guardar')
       };
 
       
@@ -31,7 +32,8 @@ export const FormularioPage = ({Agregar}) => {
 
     return (  
       <div className='formulario'>
-        <h2 className='style-3'>Configuración</h2>
+        
+        <h1 className='h1'>Configuración</h1>
 
         <Form
             name="basic"
@@ -56,30 +58,39 @@ export const FormularioPage = ({Agregar}) => {
 
           <Colores/>  
 
-          <Privacidad />      
-
-          
+          <Privacidad />     
+      
             <div style={{
               display: 'flex',
               gap: '15px',
               flexWrap: 'wrap',
               marginBottom: '108px'
               }}>
-            <Button 
-            type="primary" 
-            htmlType="submit"
-            size='large'
-            style={{borderRadius:'5px'}}
-            >Guardar cambios
-            </Button>
-            <Button 
-            htmlType="reset"
-            size='large'
-            style={{borderRadius:'5px'}}
-            >Descartar
-            </Button>
-            </div>
-           
+
+                <Button 
+                type="primary" 
+                htmlType="submit"
+                size='large'
+                style={{
+                  borderRadius:'5px',
+                  height: '45px',
+                  width: '159px'
+                }}
+                >Guardar cambios
+                </Button>
+
+                <Button 
+                htmlType="reset"
+                size='large'
+                style={{
+                  borderRadius:'5px',
+                  height: '45px',
+                  width: '112px'
+                }}
+                >Descartar
+                </Button>
+
+            </div>          
 
         </Form>
       </div>

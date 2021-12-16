@@ -18,12 +18,6 @@ export const Personas = () => {
                     
                     <Radio.Group
                     // size='large'
-                    style={{
-                        // display: 'flex',
-                        // justifyContent: 'space-between',
-                        // width: '100%',
-                        // alignItems: 'center'
-                    }}
                         >
 
                         <Space
@@ -70,10 +64,10 @@ export const Personas = () => {
               style={{ fontSize: '17px', color: '#00000080' }}
               />
               <div>
-              <p className='unnamed-character-style-2'>
+              <p>
               Este logo identificará tu espacio entre el resto.
               </p>
-              <p className='unnamed-character-style-2'>                  
+              <p className='sin-padding-bottom'>                   
               Preferiblemente sube una imagen .png igual o superior a 65px a 72ppp con fondo transparente.
               </p>
               </div>

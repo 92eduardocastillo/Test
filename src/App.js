@@ -7,13 +7,11 @@ import {Vista} from './componentes/vista/Vista'
 function App() {
   const [form,setForm] = useState ({})
 
-  const Agregar = (target) => {
-    
+  const Agregar = (target) => {    
     setForm({
-        ...form,
-        ...target
-      })
-    console.log('form: '+form.username)
+      ...form,
+      ...target
+    })
   }
   
   return (
@@ -24,7 +22,7 @@ function App() {
         </div>
         <div className='vista'>          
             <Vista
-            title = {form.username || 'Plankton - Mi Espacio'} 
+            title = {form.nameSpace || 'Plankton - Mi Espacio'} 
             url = { form.dominio || 'mi_dominio.plankton.com/proyectos/plan_de_ventas' }
             color = {form.color || '#48b5fe' }
             />       

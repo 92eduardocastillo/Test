@@ -10,16 +10,18 @@ export const Logo = () => {
 
   const [fileList, setFileList] = useState();
 
-  const [file, setFile] = useState();
+  const [loading, setLoading] = useState(false)
 
   const onChange = ({ fileList: newFileList }) => {
-    // if(newFileList.length===2){
-    //   newFileList.shift()
-    //   console.log(newFileList)
-    // }    
-      console.log(newFileList);        
-        setFileList(newFileList);
-        setFile(newFileList)
+    if( newFileList && newFileList.length > 1 ){
+      newFileList.shift()
+    }                 
+      setFileList(newFileList);
+      setLoading(false)
+      
+      setTimeout(
+        ()=>setLoading(true), 2000
+      )
   };
 
   const onPreview = async file => {
@@ -41,8 +43,9 @@ export const Logo = () => {
 
     return (
       <div className='logo-container'> 
+          
           <div style={{height:'31px'}}>
-            <b>Logo del espacio</b>
+            Logo del espacio
           </div>
           <div className='logo-row-1'>
 
@@ -55,13 +58,14 @@ export const Logo = () => {
                     marginRight: '13px',
                     fontSize: '37px',
                     lineHeight: '34px',
-                    fontWeight: 'bold' 
+                    fontWeight: '500' 
                   }}   
                 >
-               {/* { (!fileList)
-               ? (<>B</>)
-               : (<p>{fileList[0].thumbUrl}<p/>)            
-              } */}
+                {
+                  (loading && fileList) 
+                  ? <img src={`${fileList[0].thumbUrl}`} alt='foto' width='67px' height='67px'  />
+                  : <>B</>
+                }
                 </Avatar>
 
                 
@@ -74,13 +78,15 @@ export const Logo = () => {
                 >
                   <Upload 
                   name="logo" 
-                  action="" 
+                  action="https://www.mocky.io/v2/5cc8019d300000980a055e76" 
                   listType="picture" 
                   // listType="picture-card"
                   fileList={fileList}
                   onChange={onChange}
                   onPreview={onPreview}
-                  style={{width:'105px'}}>
+                  style={{width:'105px'}}
+                  >
+                  
                     <Button                   
                     icon={ <Subir /> } 
                     style={{
