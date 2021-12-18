@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Form ,Radio  } from 'antd';
 import { SketchPicker } from 'react-color'
 
@@ -8,8 +8,6 @@ export const Colores = () => {
     
     const [ colorPicker , setColorPicker ] = useState( '#48B5FE' )
     const [showColorPicker , setShowColorPicker ] = useState( false )
-
-    const radioRef = useRef()
 
     const handlerColor = updatedColor => {
         setColorPicker( updatedColor.hex )
@@ -26,7 +24,7 @@ export const Colores = () => {
     return (
         <div className='colores-container'>       
 
-            <Form.Item 
+            <Form.Item            
             name= 'color'
             label= 'Color del tema'
             style={{display:'flex' ,
@@ -37,7 +35,6 @@ export const Colores = () => {
             
             >
                 <Radio.Group
-
                 style={{
                     display:'flex' ,
                     justifyContent:'space-between',
@@ -50,8 +47,7 @@ export const Colores = () => {
                 {
                 colors.map( ( color , index ) => (
                     <div key= {index}>
-                        <Radio
-                         ref={radioRef}
+                        <Radio                        
                         className='radio'
                         style={{'--unnamed-color-circulo':color}}
                         value={color}
@@ -62,8 +58,7 @@ export const Colores = () => {
                 ))
                 }
                     <div>
-                        <Radio  
-                        checked= {!showColorPicker}               
+                        <Radio            
                         className='radio'
                         style={{'--unnamed-color-circulo':colorPicker}}
                         value={colorPicker}
@@ -83,7 +78,7 @@ export const Colores = () => {
                         (
                         <SketchPicker
                         color={colorPicker}
-                        onChange= {handlerColor}
+                        onChange = {handlerColor}
                         />
                         )
                     }
